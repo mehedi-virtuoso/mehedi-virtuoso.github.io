@@ -1,0 +1,407 @@
+/* style.css */
+
+/* General Body Styles */
+body {
+    font-family: 'Share', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Banner Styles */
+.banner-container {
+    background-color: bisque;
+}
+
+.banner-column {
+    background-color: rgb(253, 138, 29);
+}
+
+/* Navbar Styles */
+.navbar-container {
+    top: 0;
+    background-color: black;
+    position: sticky;
+    z-index: 2;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #f8f9fa;
+    background-color: #495057;
+}
+
+.education-container,
+.portfolio-container
+{
+    background-color: #EEEEEE;
+    padding: 60px 0;
+}
+/* Section Container Styles */
+.about-container,
+.project-container,
+.gallery-container,
+.linkedin-container
+ {
+    background-color: turquoise;
+    padding: 60px 0;
+}
+
+.contact-container{
+    background-color: #495057;
+}
+.bg-redtype{
+    background-color: #dc3545;
+}
+.bg-redtype:hover{
+    color: black!important;
+}
+
+
+h2.redtype-color {
+    color: #dc3545; /* Red Color */
+}
+
+/* Typography */
+h1, h3 {
+    font-family: 'Buenard', serif;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Image Styles */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+/* Specific Section Styles */
+.about-container h3,
+.about-container p {
+    color: white;
+}
+
+.about-container img {
+    border: 5px solid #fff;
+}
+
+/* Custom List Styles */
+.list-unstyled li {
+    margin-bottom: 30px;
+}
+
+.list-unstyled h5 {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.list-unstyled p {
+    color: white ;
+}
+
+/* LinkedIn Section */
+.linkedin-container a {
+    color: #0a66c2;
+    text-decoration: none;
+}
+
+.linkedin-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .banner-column {
+        padding: 20px;
+    }
+
+    .about-container img {
+        margin-top: 20px;
+    }
+}
+.inner-form{
+    background-color: #bdc915;
+}
+.footer{
+    background-color:turquoise ;
+}
+
+.circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+    font-size: 40px;
+    text-align: center;
+    color: turquoise;
+    line-height: 60px; /* Center the icon vertically */
+}
+
+.circle:hover{
+    background-color: #475D5D;
+    color: white; /* Adjust color on hover */
+}
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Share', sans-serif;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Buenard', serif;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Banner Section */
+.banner-container {
+    background: url('img/banner.jpg') no-repeat center center/cover;
+}
+
+.banner-column {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1.display-3 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+/* Navbar Section */
+.navbar-container {
+    background-color: #34495E;
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Default color */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #f8f9fa; /* Hover and active state color */
+    background-color: #495057; /* Background color on hover */
+}
+
+
+
+/* About Section */
+.about-container {
+    background-color: #34495E;
+    padding: 50px 0;
+}
+
+.about-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-container h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Education Section */
+.education-container {
+    background-color: #2980B9;
+    color: white;
+    padding: 50px 0;
+}
+
+.education-container h2 {
+    font-size: 2.5rem;
+}
+
+.education-container h5 {
+    font-size: 1.5rem;
+}
+
+.education-container p {
+    font-size: 1.1rem;
+}
+
+/* Project Section */
+.project-container {
+    background-color: #2C3E50;
+    padding: 50px 0;
+}
+
+.project-container h2 {
+    font-size: 2.5rem;
+    color: #E74C3C;
+}
+
+.project-container h5 {
+    font-size: 1.5rem;
+    color: #ECF0F1;
+}
+
+.project-container p {
+    font-size: 1.1rem;
+    color: #BDC3C7;
+}
+
+/* Portfolio Section */
+.portfolio-container {
+    background-color: #34495E;
+    padding: 50px 0;
+}
+
+.portfolio-container h2 {
+    font-size: 2.5rem;
+    color: #E74C3C;
+}
+.portfolio-container img {
+    width: 100%;
+    height: 200px; /* Set a consistent height */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    border: 1px solid #ddd; /* Optional: Add a border for aesthetics */
+    border-radius: 4px; /* Optional: Add rounded corners for a polished look */
+}
+
+
+.portfolio-container a {
+    font-size: 1.1rem;
+    color: #E74C3C;
+    text-decoration: none;
+}
+
+.portfolio-container p {
+    font-size: 0.9rem;
+    color: #BDC3C7;
+}
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 pictures in a row */
+    gap: 10px; /* Space between images */
+    padding: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Ensures uniform height while keeping aspect ratio */
+}
+
+.gallery-container h2 {
+    font-size: 2.5rem;
+    color: #E74C3C!important; /* Red color for the heading */
+}
+
+
+
+
+/* Contact Section */
+.contact-container {
+    background-color: #34495E;
+    padding: 50px 0;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    color: #E74C3C;
+}
+
+.contact-container .form-control {
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.contact-container .btn-primary {
+    background-color: #E74C3C;
+    border-color: #E74C3C;
+}
+
+.contact-container .btn-primary:hover {
+    background-color: #C0392B;
+    border-color: #C0392B;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #2C3E50;
+    padding: 50px 0;
+}
+
+.footer p, .footer em {
+    font-size: 1.1rem;
+    color: #ECF0F1;
+}
+
+.footer .circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+    font-size: 40px;
+    text-align: center;
+    color: #E74C3C;
+    line-height: 60px;
+    transition: all 0.3s ease;
+}
+
+.footer .circle:hover {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.footer .circle i.fa-linkedin-in {
+    color: #0077B5; /* LinkedIn's official color */
+}
+.footer .circle i.fa-whatsapp {
+    color: #25D366;
+}
+
+.footer .circle i.fa-envelope {
+    color: #D44638;
+}
+
+
+.workshops-attended {
+    padding: 20px;
+    background-color: #333; /* Dark background to contrast the white text */
+    margin: 20px 0;
+}
+
+.workshops-attended h2 {
+    color: #fff; /* White text for the section title */
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.workshops-attended ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.workshops-attended li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff; /* White text for the list items */
+}
