@@ -277,7 +277,7 @@ h1.display-3 {
 .portfolio-container img {
     width: 100%;
     height: auto; /* Set a consistent height */
-    max-height: 300px; /* Ensures uniform height while keeping aspect ratio */
+    max-height: 350px; /* Ensures uniform height while keeping aspect ratio */
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
     border: 1px solid #ddd; /* Optional: Add a border for aesthetics */
     border-radius: 4px; /* Optional: Add rounded corners for a polished look */
