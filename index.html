@@ -36,6 +36,7 @@
                 <li class="nav-item"><a class="nav-link active" href="#About">ABOUT</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Education">EDUCATION</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Project">PROJECT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Publications">PUBLICATIONS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Portfolio">PORTFOLIO</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Gallery">GALLERY</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Contact">CONTACT</a></li>
@@ -47,21 +48,90 @@
 </nav>
 
 <!-- JavaScript to handle active state -->
+
 <script>
-    // Get all nav links
-    const navLinks = document.querySelectorAll('.nav-link');
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Add click event listener to each nav link
+    const navbar = document.querySelector(".custom-navbar");
+
+    const navLinks = document.querySelectorAll(
+        '.navbar-nav .nav-link[href^="#"]'
+    );
+
+    const sections = [
+        "About",
+        "Education",
+        "Project",
+        "Publications",
+        "Portfolio",
+        "Gallery",
+        "Contact"
+    ].map(id => document.getElementById(id)).filter(Boolean);
+
+    function updateActiveNav() {
+
+        const navbarHeight = navbar
+            ? navbar.getBoundingClientRect().height
+            : 0;
+
+        // Detection line just below the navbar
+        const detectionPoint = navbarHeight + 100;
+
+        let activeSection = sections[0];
+
+        sections.forEach(section => {
+
+            const rect = section.getBoundingClientRect();
+
+            // Find the section currently occupying the detection line
+            if (
+                rect.top <= detectionPoint &&
+                rect.bottom > detectionPoint
+            ) {
+                activeSection = section;
+            }
+        });
+
+        // Highlight Contact when reaching the bottom of the page
+        if (
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 5
+        ) {
+            activeSection = sections[sections.length - 1];
+        }
+
+        navLinks.forEach(link => {
+
+            const isActive =
+                link.getAttribute("href") === "#" + activeSection.id;
+
+            link.classList.toggle("active", isActive);
+
+            if (isActive) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", updateActiveNav, {
+        passive: true
+    });
+
+    window.addEventListener("resize", updateActiveNav);
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Remove 'active' class from all nav links
-            navLinks.forEach(link => link.classList.remove('active'));
-
-            // Add 'active' class to the clicked link
-            this.classList.add('active');
+        link.addEventListener("click", () => {
+            setTimeout(updateActiveNav, 100);
         });
     });
+
+    updateActiveNav();
+
+});
 </script>
+
 
 <!-- Custom CSS for navbar size -->
 <style>
@@ -199,6 +269,151 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Publications Section -->
+    <section class="publications-container py-5" id="Publications">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col py-4">
+                    <h2 class="redtype-color font-weight-bold">Publications</h2>
+                    <p class="publications-intro">Research articles and conference publications</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12">
+                    <article class="publication-card">
+                        <span class="publication-type">Journal Article</span>
+                        <h4>Comprehensive Study on Cognitive Radio and IoT Networks: Vulnerabilities and Countermeasures</h4>
+                        <p><strong>Authors:</strong> Md. Mehedi Hassan, Md. Ashif Rahman, Md. Sahidul Islam Turab, Md. Rabiul Islam, Md Shadman Aadeeb, and A.K.M. Muzahidul Islam</p>
+                        <p><strong>Journal:</strong> <em>Computer Science Review</em> (Q1 Journal, Elsevier; Impact Factor: 17.5)</p>
+                        <p><strong>Publication date:</strong> 1 July 2026</p>
+                        <p class="publication-links">
+                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1574013726001425" target="_blank" rel="noopener noreferrer">Publication Link</a>
+                            <span aria-hidden="true"> | </span>
+                            <a href="https://doi.org/10.1016/j.cosrev.2026.101034" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.cosrev.2026.101034</a>
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-12">
+                    <article class="publication-card">
+                        <span class="publication-type">Conference Paper</span>
+                        <h4>Hybrid Disinfection Robot: A Prototype</h4>
+                        <p><strong>Authors:</strong> <a href="https://ieeexplore.ieee.org/author/37089647400" target="_blank" rel="noopener noreferrer">Md. Mehedi Hassan</a>, Al Amin, <a href="https://ieeexplore.ieee.org/author/37089087059" target="_blank" rel="noopener noreferrer">Md. Mizanur Rahman</a>, and <a href="https://ieeexplore.ieee.org/author/37089268359" target="_blank" rel="noopener noreferrer">A.K.M. Muzahidul Islam</a></p>
+                        <p><strong>Conference:</strong> <em>IEEE Region 10 Symposium (TENSYMP)</em></p>
+                        <p><strong>Presentation/publication date:</strong> 19 November 2024</p>
+                        <p class="publication-links">
+                            <a href="https://ieeexplore.ieee.org/document/10751816" target="_blank" rel="noopener noreferrer">Publication Link</a>
+                            <span aria-hidden="true"> | </span>
+                            <a href="https://doi.org/10.1109/TENSYMP61132.2024.10751816" target="_blank" rel="noopener noreferrer">DOI: 10.1109/TENSYMP61132.2024.10751816</a>
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-12">
+                    <article class="publication-card">
+                        <span class="publication-type publication-status">Under Review</span>
+                        <h4>Leveraging Next Generation Networks for Evolving Security Challenges and Solutions – A Comprehensive Review</h4>
+                        <p><strong>Authors:</strong> Al Imran, Md. Mehedi Hassan, Provat Kundu Shawon, and A.K.M. Muzahidul Islam</p>
+                        <p><strong>Journal:</strong> Submitted to a Q1 journal for review.</p>
+                    </article>
+                </div>
+
+                <div class="col-12">
+                    <article class="publication-card">
+                        <span class="publication-type publication-status">Under Review</span>
+                        <h4>Next-Generation Wireless Healthcare Systems: A Comprehensive Review</h4>
+                        <p><strong>Authors:</strong> Ishtiak Al Mamoon, Md. Mehedi Hassan, Md. Samiul Alom, Md. Abdul Awal, Sheekar Banerjee, and A.K.M. Muzahidul Islam</p>
+                        <p><strong>Journal:</strong> Submitted to a Q1 journal for review.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section Styles -->
+    <style>
+        .publications-container {
+            background: #f8f9fa;
+        }
+
+        .publications-intro {
+            color: #666;
+            font-size: 1.05rem;
+            margin-top: 0.5rem;
+        }
+
+        .publication-card {
+            height: 100%;
+            padding: 1.75rem;
+            background: #fff;
+            border-left: 5px solid #dc3545;
+            border-radius: 8px;
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .publication-card h4 {
+            color: #252525;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.45;
+            margin: 0.75rem 0 1rem;
+        }
+
+        .publication-card p {
+            color: #444;
+            line-height: 1.65;
+            margin-bottom: 0.55rem;
+            overflow-wrap: anywhere;
+        }
+
+        .publication-card a {
+            color: #b42332;
+            text-decoration: none;
+        }
+
+        .publication-card a:hover {
+            text-decoration: underline;
+        }
+
+        .publication-type {
+            display: inline-block;
+            padding: 0.3rem 0.7rem;
+            color: #fff;
+            background: #343a40;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .publication-status {
+            color: #664d03;
+            background: #fff3cd;
+        }
+
+        @media (max-width: 576px) {
+            .publication-card {
+                padding: 1.2rem;
+            }
+
+            .publication-card h4 {
+                font-size: 1.12rem;
+            }
+
+            .publication-links span {
+                display: none;
+            }
+
+            .publication-links a {
+                display: block;
+                margin-top: 0.35rem;
+            }
+        }
+    </style>
 
     <!-- Portfolio Section -->
 <div class="portfolio-container py-5" id="Portfolio">
