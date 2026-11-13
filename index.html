@@ -37,6 +37,7 @@
                 <li class="nav-item"><a class="nav-link" href="#Education">EDUCATION</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Project">PROJECT</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Publications">PUBLICATIONS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Skills">TECHNICAL SKILLS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Portfolio">PORTFOLIO</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Gallery">GALLERY</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Contact">CONTACT</a></li>
@@ -63,9 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "Education",
         "Project",
         "Publications",
+        "Skills",
         "Portfolio",
         "Gallery",
-        "Contact"
+        "Contact",
+        
     ].map(id => document.getElementById(id)).filter(Boolean);
 
     function updateActiveNav() {
@@ -414,9 +417,70 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     </style>
+ <!-- TECHNICAL SKILLS SECTION -->
+ <section  class="technical-skills" id="Skills"  py-5">
+            <div class="container">
+             <div class="row text-center">
+                <div class="col py-4">
+                    <h2 class="redtype-color font-weight-bold">Technical Skills</h2>
+                
+                </div>
+            </div>
+    
 
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Programming Languages</h3>
+                <p>C, Visual Basic, Assembly</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Packages & Applications</h3>
+                <p>MS Word, MS Excel, MS PowerPoint, Rcode</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Operating Systems</h3>
+                <p>Windows XP, 7, 8, 10, 11 and Linux</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Design & Simulation Tools</h3>
+                <p>
+                    AutoCAD Electrical (2D/3D), PVsyst, PSpice,
+                    MATLAB, Proteus, Multisim, PSIM, ETAP Simulation
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>VLSI & EDA Tools</h3>
+                <p>
+                    Cadence RTL Compiler, Encounter, Virtuoso,
+                    Schematic Design
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Industrial Automation</h3>
+                <p>
+                    PLC, HMI, SCADA, LOGO! Soft,
+                    AVR Code, SILOS, Code::Blocks
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Power System Engineering</h3>
+                <p>
+                    HV/MV/LV Systems, Switchgear,
+                    Protection Systems
+                </p>
+            </div>
+
+        </div>
+    </section>
     <!-- Portfolio Section -->
-<div class="portfolio-container py-5" id="Portfolio">
+ <div class="portfolio-container py-5" id="Portfolio">
     <div class="container">
         <div class="row text-center">
             <div class="col py-5">
@@ -483,7 +547,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         </div>
     </div>
-</div>
+ </div>
 
 
 
@@ -512,7 +576,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     
  <!-- Gallery Section -->
-<div class="gallery-container py-4" id="Gallery">
+ <div class="gallery-container py-4" id="Gallery">
     <div class="container">
         <div class="row text-center">
             <div class="col py-5">
@@ -565,7 +629,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </div>
     </div>
-</div>
+ </div>
 
 
 
